@@ -13,7 +13,7 @@ public class LargoNombre {
         System.out.println("Ingrese el tercer nombre");
         String nombre3 = s.nextLine();
 
-        String masLargo = nombre1.length() > nombre2.length() ? nombre1 :
+        String masLargo = ( nombre1.length() > nombre2.length() && nombre1.length() > nombre3.length() ) ? nombre1 :
                 nombre2.length() > nombre3.length() ? nombre2 : nombre3;
         System.out.println("El nombre más largo de los 3 es: " + masLargo);
     }

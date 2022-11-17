@@ -11,8 +11,15 @@ public class NombreMasLargo {
         String[] nom2 = nombre2.split(" ");
         String[] nom3 = nombre3.split(" ");
 
-        String masLargo = nom1[0].length() > nom2[0].length() ? nombre1 :
-                nom2[0].length() > nom3[0].length() ? nombre2 : nombre3;
+        String masLargo = (nom1[0].length() > nom2[0].length() && nom1[0].length() > nom3[0].length()) ? nombre1
+                : nom2[0].length() > nom3[0].length() ? nombre2 : nombre3;
+
+        /*
+        lo podria haber hecho mas corto evitando la definición de los 3 arrays con:
+        String masLargo = nombre1.split(" ")[0].length() > nombre2.split(" ")[0].length()
+                        && nombre1.split(" ")[0].length() > nombre3.split(" ")[0].length() ? nombre1 :
+                        nombre2.split(" ")[0].length() > nombre3.split(" ")[0].length() ? nombre2 : nombre3;
+         */
         JOptionPane.showMessageDialog(null, masLargo.concat(" tiene el nombre mas largo."));
 
     }
